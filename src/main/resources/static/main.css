@@ -1,19 +1,20 @@
 body {
-    background-color: #171831;
-    color: white;
+    background-color: #0b172b;
+    color: #132036;
     font-family: 'Arial', sans-serif;
 }
 
 #main-content {
     margin-top: 50px;
-    background-color: #1f2044;
+    background-color: #132036;
     border-radius: 12px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    color: #E5E5E5;
 }
 
 h2 {
-    color: #6968d4;
+    color: #FFC300;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -30,13 +31,13 @@ h2 {
     padding: 10px 20px;
     width: 100%;
     max-width: 300px;
-    border: 1px solid #6968d4;
+    border: 1px solid #FFC300;
     background-color: transparent;
-    color: white;
+    color: #E5E5E5;
 }
 
 .form-control::placeholder {
-    color: #c2c2c2;
+    color: #ffd342;
 }
 
 .btn {
@@ -48,30 +49,31 @@ h2 {
 }
 
 .btn-connect {
-    background-color: #28a745;
-    color: white;
+    background-color: #FFC300;
+    color: #132036;
 }
 
 .btn-connect:hover {
-    background-color: #218838;
+    background-color: #ffd342;
 }
 
 .btn-disconnect {
-    background-color: #dc3545;
-    color: white;
+    background-color: #132036;
+    color: #E5E5E5;
+    border: 1px solid #FFC300;
 }
 
 .btn-disconnect:hover {
-    background-color: #c82333;
+    background-color: #1a2a42;
 }
 
 .btn-primary {
-    background-color: #6968d4;
-    color: white;
+    background-color: #FFC300;
+    color: #132036;
 }
 
 .btn-primary:hover {
-    background-color: #5756b8;
+    background-color: #ffd342;
 }
 
 .btn:disabled {
@@ -102,23 +104,23 @@ h2 {
 }
 
 #conversation th {
-    background-color: #6968d4;
-    color: white;
+    background-color: #FFC300;
+    color: #132036;
     text-align: center;
 }
 
 #conversation td {
-    background-color: #2f3055;
-    color: white;
+    background-color: #1a2a42;
+    color: #E5E5E5;
     padding: 10px;
 }
 
 #conversation tr:nth-child(even) {
-    background-color: #3a3b66;
+    background-color: #132036;
 }
 
 #conversation tr:hover {
-    background-color: #44456e;
+    background-color: #1f3658;
 }
 
 #live-chat {
@@ -132,12 +134,12 @@ h2 {
 
 .message-text {
     font-size: 16px;
-    color: white;
+    color: #E5E5E5;
 }
 
 .message-time {
     font-size: 12px;
-    color: #c2c2c2;
+    color: #ffd342;
     margin-top: 5px;
     text-align: right;
 }
