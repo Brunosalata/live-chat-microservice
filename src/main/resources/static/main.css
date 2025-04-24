@@ -6,8 +6,10 @@ body {
 
 #main-content {
     margin-top: 50px;
+    margin-bottom: 50px;
     background-color: #132036;
     border-radius: 12px;
+    backdrop-filter: blur(12px);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
     color: #E5E5E5;
@@ -16,14 +18,20 @@ body {
 h2 {
     color: #FFC300;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .form-inline {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.input-button-group {
+    display: flex;
+    flex: 1;
 }
 
 .form-control {
@@ -34,6 +42,7 @@ h2 {
     border: 1px solid #FFC300;
     background-color: transparent;
     color: #E5E5E5;
+    transition: all 0.3s ease;
 }
 
 .form-control::placeholder {
@@ -45,12 +54,14 @@ h2 {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease all;
 }
 
 .btn-connect {
     background-color: #FFC300;
     color: #132036;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
 }
 
 .btn-connect:hover {
@@ -76,18 +87,42 @@ h2 {
     background-color: #ffd342;
 }
 
+.btn-send {
+    background-color: rgba(255, 211, 66, 1.0);
+    border-radius: 25px;
+    margin-left: 10px;
+    border: none;
+    padding: 6px 10px 7px 10px;
+    transition: 0.3s ease all;
+    height: 100%;
+    color: #0b172b;
+    white-space: nowrap;
+}
+
+.btn-send:hover{
+    background-color: rgba(255, 211, 66, 0.8);
+    color: #132036;
+}
+
 .btn:disabled {
     background-color: #bdbdbd;
 }
 
 #message-input {
+     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    gap: 12px;
 }
 
 #message-input input {
+    flex: 1;
     border-radius: 25px;
     padding: 10px 20px;
+    border: none;
     width: calc(100% - 120px);
+    background-color: rgba(255, 255, 255, 0.05);
     margin-right: 10px;
 }
 

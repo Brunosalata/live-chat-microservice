@@ -28,6 +28,12 @@ function setConnected(connected) {
     else {
         $("#conversation").hide();
     }
+    $("#message").keypress(function(event) {
+        if (event.which === 13) { // 13 é o código da tecla Enter
+            event.preventDefault(); // evita o envio do formulário
+            $("#send").click(); // aciona o botão de envio
+        }
+    });
 }
 
 function connect() {
@@ -41,11 +47,13 @@ function disconnect() {
 }
 
 function sendMessage() {
-    stompClient.publish({
-        destination: "/app/new-message",
-        body: JSON.stringify({'user': $("#user").val(), 'message': $("#message").val()})
-    });
-    $("#message").val("");
+    if($("#user").val()!="" && $("#message").val()!=""){
+        stompClient.publish({
+            destination: "/app/new-message",
+            body: JSON.stringify({'user': $("#user").val(), 'message': $("#message").val()})
+        });
+        $("#message").val("");
+    }
 }
 
 function updateLiveChat(message) {
